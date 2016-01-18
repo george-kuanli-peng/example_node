@@ -1,3 +1,9 @@
+/**
+ * @fileoverview The main script of hello_node. It initializes the components of the system.
+ *
+ * George Peng: Creates original skeleten of the file.
+ */
+
 var express = require('express');
 
 var app = express();
