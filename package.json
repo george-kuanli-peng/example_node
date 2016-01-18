@@ -2,13 +2,22 @@
   "name": "hello_node",
   "version": "1.0.0",
   "description": "A node.js project for TaaS demonstration.",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node app.js",
+    "gendoc": "./node_modules/.bin/jsdoc app.js libs routes models -d doc",
+    "test": "./node_modules/.bin/_mocha -r jscoverage -u tdd --covignore .covignore --covout=html --covinject=true tests"
   },
   "author": "George Peng",
   "license": "ISC",
   "dependencies": {
     "express": "^4.13.3"
+  },
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "jscoverage": "^0.6.0",
+    "jsdoc": "^3.4.0",
+    "mocha": "^2.3.4",
+    "node-mocks-http": "^1.5.1"
   }
 }
