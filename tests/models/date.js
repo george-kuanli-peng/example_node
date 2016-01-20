@@ -5,13 +5,26 @@ var date = require('../../models/date');
 
 suite('models/Date', function() {
 
+    suiteSetup(function() {
+        // Initialization for the whole test suite (optional)
+    });
+
+    suiteTeardown(function() {
+        // Clean-up for the whole test suite (optional)
+    });
+
     setup(function() {
+        // Initilization for each test case (optional)
+        // Eg., create mock DB
     });
 
     teardown(function() {
+        // Clean-up for each test case (optional)
+        // Eg., delete mock DB
     });
 
-    test('getDay', function() {
+    // Synchronous test case
+    test('#getDay', function() {
         var today = new Date();
         var expected = today.getDay() + 1;
 
@@ -20,7 +33,8 @@ suite('models/Date', function() {
 	assert.equal(actual, expected);
     });
 
-    test('getDayWrong', function() {
+    // For demo: this test case should fail
+    test('#getDayWrong', function() {
         var today = new Date();
         var expected = today.getDay() + 1;
 

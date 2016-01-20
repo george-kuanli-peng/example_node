@@ -1,6 +1,10 @@
 /**
  * @fileoverview Models dates.
  */
+/* Revision:
+ * 2016/1/17 (George Peng)
+ *   Initial implementation.
+ */
 
 /**
  * Models dates.
@@ -20,10 +24,18 @@ exports.Date = function(year, month, day) {
 
     _dateObj = new Date(year, month-1, day);
 
+    /**
+     * Gets the day of week.
+     * @returns {number} day of week
+     */
     this.getDay = function () {
         return _dateObj.getDay() + 1;
     };
 
+    /**
+     * Gets the day of week (buggy version).
+     * @returns {number} day of week
+     */
     this.getDayWrong = function () {
         return _dateObj.getDay();
     };

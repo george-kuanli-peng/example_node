@@ -6,13 +6,8 @@ var date = require('../../routes/date');
 
 suite('routes/date', function() {
 
-    setup(function() {
-    });
-
-    teardown(function() {
-    });
-
-    test('date (valid parms)', function() {
+    test('#date (valid parms)', function() {
+        // create mock http request
         var request = httpMocks.createRequest({
 	    method: 'GET',
 	    url: '/date',
@@ -28,6 +23,7 @@ suite('routes/date', function() {
 	    }
 	});
 
+        // create mock http response
 	var response = httpMocks.createResponse();
 	date.handleDate(request, response);
 

@@ -1,14 +1,18 @@
 /**
  * @fileoverview Handles the date requests.
  */
+/* Revision:
+ * 2016/1/10 (George Peng)
+ *   Initial implementation.
+ */
 
 var date = require('../models/date');
 var util = require('util');
 
 /**
  * /date GET handler
- * @param {http.Request} req http request
- * @param {http.Response} res http response
+ * @param {http.ClientRequest} req http request
+ * @param {http.ServerResponse} res http response
  */
 exports.handleDate = function(req, res) {
     if (req === undefined || res === undefined) {

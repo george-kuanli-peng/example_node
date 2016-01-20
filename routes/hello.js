@@ -1,11 +1,15 @@
 /**
  * @fileoverview Handles user hello requests.
  */
+/* Revision:
+ * 2015/12/24 (George Peng)
+ *   Initial implementation.
+ */
 
 /**
  * /hello GET handler
- * @param {http.Request} req http request
- * @param {http.Response} res http response
+ * @param {http.ClientRequest} req http request
+ * @param {http.ClientResponse} res http response
  */
 function hello(req, res) {
     if (req === undefined || res === undefined) {
