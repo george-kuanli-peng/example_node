@@ -14,12 +14,14 @@ Set up
 This project is tested on Node v4.2.3, in a machine running Ubuntu Linux 14.04 LTS.
 
 To install the dependent Node packages:
+
     npm install
 
 Unit test
 ---------
 
 To run unit tests:
+
     npm test
 
 The test results by [Mocha](https://mochajs.org/) will be shown on the console.
@@ -29,6 +31,7 @@ API documentation
 -----------------
 
 To generate API documents:
+
     npm run-script gendoc
 
 API documents by [JSDoc](https://github.com/jsdoc3/jsdoc) could be found at the doc directory.
