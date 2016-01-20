@@ -2,7 +2,9 @@
  * @fileoverview Board messages
  */
 /* Revision:
- * 2016/1/17 (George)
+ * 2016/1/18 (Kentzu Liu)
+ *   Fix a bug of file path (351).
+ * 2016/1/17 (George Peng)
  *   Initial implementation
  */
 var fs = require('fs');
