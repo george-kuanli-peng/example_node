@@ -1,0 +1,7 @@
+example_node:
+  #restart: always
+  container_name: example_node
+  build: ..
+  dockerfile: Dockerfile
+  ports:
+   - "1337:1337"
