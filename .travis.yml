@@ -7,8 +7,14 @@ before_install:
   - sudo apt-get update
   - sudo apt-get install python python-pip
   - sudo pip install selenium
+before_script:
+  - export DISPLAY=:99.0
+  - bash -e /etc/init.d/xvfb start
+  - sleep 3  # give xvfb some time to start
 scripts:
   - npm test
+  - sleep 30  # wait for deployment on heroku
+  - python ./tests/integration_remote/tc1_wd.py
 addons:
   sauce_connect:
     username: "george-peng"
