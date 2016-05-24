@@ -2,3 +2,14 @@ language: node_js
 node_js:
   - "5.1"
   - "4.2"
+sudo: required
+before_install:
+  - sudo apt-get update
+  - sudo apt-get install python python-pip
+  - sudo pip install selenium
+scripts:
+  - npm test
+addons:
+  sauce_connect:
+    username: "george-peng"
+    access_key: "565e1e9e-0fd1-4f4d-914b-25cd125d6e4d"
