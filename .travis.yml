@@ -11,7 +11,7 @@ before_script:
   - export DISPLAY=:99.0
   - bash -e /etc/init.d/xvfb start
   - sleep 3  # give xvfb some time to start
-scripts:
+script:
   - npm test
   - sleep 30  # wait for deployment on heroku
   - python ./tests/integration_remote/tc1_wd.py
