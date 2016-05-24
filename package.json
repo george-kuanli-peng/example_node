@@ -6,8 +6,8 @@
   "scripts": {
     "start": "node app.js",
     "gendoc": "./node_modules/.bin/jsdoc app.js libs routes models -d doc",
-    "test": "./node_modules/.bin/_mocha -r jscoverage -u tdd --covignore .covignore --covout=html --covinject=true tests",
-    "test-ci": "./node_modules/.bin/_mocha -r jscoverage -u tdd --covignore .covignore --covout=list --coverage=90,80,40 --covinject=true tests"
+    "test": "./node_modules/.bin/_mocha -u tdd tests",
+    "test-ci": "./node_modules/.bin/_mocha -u tdd tests"
   },
   "author": "George Peng",
   "license": "ISC",
