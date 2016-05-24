@@ -17,7 +17,6 @@
   },
   "devDependencies": {
     "grunt": "^0.4.5",
-    "jscoverage": "^0.6.0",
     "jsdoc": "^3.4.0",
     "mocha": "^2.3.4",
     "node-mocks-http": "^1.5.1",
