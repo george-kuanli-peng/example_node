@@ -12,12 +12,13 @@
 var express = require('express');
 var log4js = require('log4js');
 var logger = require('./libs/logging').getLogger();
+var port = process.env.PORT || 1337;  // process.env.PORT lets the port be set by Heroku
 
 app = express();
 app.use(log4js.connectLogger(logger, {level:'auto'}));
 
 require('./routes/index.js');
 
-app.listen(1337, function () {
+app.listen(port, function () {
     logger.info('ready on port 1337');
 });
