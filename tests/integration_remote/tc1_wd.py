@@ -15,7 +15,8 @@ access_key = os.environ["SAUCE_ACCESS_KEY"]
 capabilities = {
         'tunnel-identifier': os.environ["TRAVIS_JOB_NUMBER"],
         'build': os.environ['TRAVIS_BUILD_NUMBER'],
-        'tags': [os.environ['TRAVIS_PYTHON_VERSION'], 'CI']
+        # 'tags': [os.environ['TRAVIS_PYTHON_VERSION'], 'CI']
+        'tags': ['CI',]
         }
 hub_url = "%s:%s@localhost:4455" % (username, access_key)
 base_url = "https://examplenode.herokuapp.com"
