@@ -23,7 +23,6 @@ capabilities = {
 hub_url = "%s:%s@ondemand.saucelabs.com" % (username, access_key)  # The original settings from Travis CI doc do not apply here
 base_url = "https://examplenode.herokuapp.com"
 
-print('hub_url=' + hub_url);
 
 class TC1(unittest.TestCase):
     def setUp(self):
@@ -45,7 +44,7 @@ class TC1(unittest.TestCase):
         driver.find_element_by_name("last_name").send_keys("Peng")
         driver.find_element_by_css_selector("input[type=\"submit\"]").click()
         element = WebDriverWait(driver, 10).until(
-                expected_conditions.text_to_be_present_in_element_value((By.CSS_SELECTOR, 'body'), 'First name')
+                expected_conditions.text_to_be_present_in_element((By.CSS_SELECTOR, 'body'), 'First name')
                 )
 
     def test_tc2(self):

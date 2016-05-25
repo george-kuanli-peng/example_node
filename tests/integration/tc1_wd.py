@@ -11,8 +11,8 @@ import unittest, time, re
 
 class TC1(unittest.TestCase):
     def setUp(self):
-        self.driver = webdriver.Firefox()
-        self.driver.implicitly_wait(30)  # add manually
+        self.driver = webdriver.Firefox(timeout=60)  # timeout set manually
+        # self.driver.implicitly_wait(30)  # add manually
         # self.base_url = "http://127.0.0.1:1337/"
         self.base_url = "http://127.0.0.1:1337"  # change manually
         self.verificationErrors = []
@@ -27,7 +27,7 @@ class TC1(unittest.TestCase):
         driver.find_element_by_name("last_name").send_keys("Peng")
         driver.find_element_by_css_selector("input[type=\"submit\"]").click()
         element = WebDriverWait(driver, 10).until(
-                expected_conditions.text_to_be_present_in_element_value((By.CSS_SELECTOR, 'body'), 'First name')
+                expected_conditions.text_to_be_present_in_element((By.CSS_SELECTOR, 'body'), 'First name')
                 )
 
     def test_tc2(self):
