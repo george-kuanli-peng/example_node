@@ -28,9 +28,9 @@ class TC1(unittest.TestCase):
     def setUp(self):
         self.driver = webdriver.Remote(
                 desired_capabilities=capabilities,
-                command_executor="http://%s/wd/hub" % hub_url
+                command_executor="http://%s/wd/hub" % hub_url,
+                timeout=60  # timeout set manually
                 )
-        self.driver.implicitly_wait(30)  # add manually
         self.base_url = base_url  # change manually
         self.verificationErrors = []
         self.accept_next_alert = True
@@ -94,9 +94,9 @@ class TC2(unittest.TestCase):
         driver = self.driver
         driver.get(self.base_url + "/")
         driver.find_element_by_name("first_name").clear()
-        driver.find_element_by_name("first_name").send_keys("Goerge")
+        driver.find_element_by_name("first_name").send_keys("Mary")
         driver.find_element_by_name("last_name").clear()
-        driver.find_element_by_name("last_name").send_keys("Peng")
+        driver.find_element_by_name("last_name").send_keys("Wang")
 
     def is_element_present(self, how, what):
         try: self.driver.find_element(by=how, value=what)
