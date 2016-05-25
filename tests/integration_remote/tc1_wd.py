@@ -15,6 +15,8 @@ access_key = os.environ["SAUCE_ACCESS_KEY"]
 capabilities = {
         'tunnel-identifier': os.environ["TRAVIS_JOB_NUMBER"],
         'build': os.environ['TRAVIS_BUILD_NUMBER'],
+        'browserName': 'firefox',
+        'platform': 'Linux',
         # 'tags': [os.environ['TRAVIS_PYTHON_VERSION'], 'CI']
         'tags': ['CI',]
         }
