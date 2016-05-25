@@ -8,6 +8,7 @@ from selenium.common.exceptions import NoAlertPresentException
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions
 import unittest, time, re
+import os
 
 username = os.environ["SAUCE_USERNAME"]
 access_key = os.environ["SAUCE_ACCESS_KEY"]
