@@ -28,9 +28,9 @@ class TC1(unittest.TestCase):
     def setUp(self):
         self.driver = webdriver.Remote(
                 desired_capabilities=capabilities,
-                command_executor="http://%s/wd/hub" % hub_url,
-                timeout=60  # timeout set manually
+                command_executor="http://%s/wd/hub" % hub_url
                 )
+        self.driver.implicitly_wait(30)  # add manually
         self.base_url = base_url  # change manually
         self.verificationErrors = []
         self.accept_next_alert = True
