@@ -18,8 +18,10 @@ capabilities = {
         # 'tags': [os.environ['TRAVIS_PYTHON_VERSION'], 'CI']
         'tags': ['CI',]
         }
-hub_url = "%s:%s@localhost:4455" % (username, access_key)
+hub_url = "%s:%s@ondemand.saucelabs.com" % (username, access_key)  # The original settings from Travis CI doc do not apply here
 base_url = "https://examplenode.herokuapp.com"
+
+print('hub_url=' + hub_url);
 
 class TC1(unittest.TestCase):
     def setUp(self):
