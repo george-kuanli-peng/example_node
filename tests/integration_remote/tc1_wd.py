@@ -42,7 +42,7 @@ class TC1(unittest.TestCase):
         driver.find_element_by_name("first_name").send_keys("Goerge")
         driver.find_element_by_name("last_name").clear()
         driver.find_element_by_name("last_name").send_keys("Peng")
-        driver.find_element_by_css_selector("input[type=\"submit\"]").click()
+        driver.find_element_by_css_selector("input#hello_submit").click()
         element = WebDriverWait(driver, 10).until(
                 expected_conditions.text_to_be_present_in_element((By.CSS_SELECTOR, 'body'), 'First name')
                 )
@@ -56,6 +56,10 @@ class TC1(unittest.TestCase):
         driver.find_element_by_name("month").send_keys("2")
         driver.find_element_by_name("day").clear()
         driver.find_element_by_name("day").send_keys("16")
+        driver.find_element_by_css_selector("input#date_submit").click()
+        element = WebDriverWait(driver, 10).until(
+                expected_conditions.text_to_be_present_in_element((By.CSS_SELECTOR, 'body'), 'week')
+                )
     
     def is_element_present(self, how, what):
         try: self.driver.find_element(by=how, value=what)
