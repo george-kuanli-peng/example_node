@@ -18,7 +18,7 @@ capabilities = {
         'tags': ['Bluemix', 'DevOps']
         }
 hub_url = "%s:%s@ondemand.saucelabs.com" % (username, access_key)  # The original settings from Travis CI doc do not apply here
-base_url = "http://%s.au-syd.mybluemix.net" % os.environ['APP_NAME']
+base_url = "http://%s.au-syd.mybluemix.net" % os.environ['HOST_NAME']
 
 
 class TC1(unittest.TestCase):
